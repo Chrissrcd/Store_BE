@@ -4,6 +4,7 @@ import com.prueba.Marathon_BE.models.Employee;
 import java.util.List;
 
 public interface EmployeeService {
+
     // Obtener todos los registros de employees
     List<Employee> listar();
 

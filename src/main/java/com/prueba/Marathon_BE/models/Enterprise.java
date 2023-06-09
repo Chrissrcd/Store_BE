@@ -1,43 +1,42 @@
-
 package com.prueba.Marathon_BE.models;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="enterprise")
+@Table(name = "enterprises")
 public class Enterprise {
+
     @Id
     @Column
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
-    @Column(name="created_by")
+
+    @Column(name = "created_by")
     private String createdBy;
-    
-    @Column(name="create_date")
+
+    @Column(name = "create_date")
     private LocalDateTime createDate;
-    
-    @Column(name="modified_by")
+
+    @Column(name = "modified_by")
     private String modifiedBy;
-    
-    @Column(name="modified_date")
+
+    @Column(name = "modified_date")
     private LocalDateTime modifiedDate;
-    
+
     @Column
     private boolean status;
-    
+
     @Column
     private String address;
-    
+
     @Column
     private String name;
-    
+
     @Column
     private String phone;
 
     // Getters and Setters
-
     public int getId() {
         return id;
     }

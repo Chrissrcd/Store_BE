@@ -4,7 +4,8 @@ import com.prueba.Marathon_BE.models.Enterprise;
 import java.util.List;
 
 public interface EnterpriseService {
-     // Obtener todos los registros de enterprises
+    // Obtener todos los registros de enterprises
+
     List<Enterprise> listar();
 
     // Obtener un registro de enterprise por su id

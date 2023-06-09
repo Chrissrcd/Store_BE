@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/departments")
 public class DepartmentController {
-    
+
     @Autowired
     private DepartmentService departmentService;
-    
+
     @GetMapping
-    public List<Department> listar(){
+    public List<Department> listar() {
         return departmentService.listar();
     }
-    
+
     @PostMapping
-    public Department agregar(@RequestBody Department department){
+    public Department agregar(@RequestBody Department department) {
         return departmentService.add(department);
     }
-    
+
     @GetMapping(path = {"/{id}"})
     public Department listarID(@PathVariable("id") int id) {
         return departmentService.listarId(id);

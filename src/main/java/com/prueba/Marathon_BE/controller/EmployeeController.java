@@ -14,24 +14,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
+
     @Autowired
     private EmployeeService employeeService;
-    
+
     @GetMapping
-    public List<Employee> listar(){
+    public List<Employee> listar() {
         return employeeService.listar();
     }
-    
+
     @PostMapping
-    public Employee agregar(@RequestBody Employee employee){
+    public Employee agregar(@RequestBody Employee employee) {
         return employeeService.add(employee);
     }
-    
+
     @GetMapping(path = {"/{id}"})
     public Employee listarID(@PathVariable("id") int id) {
         return employeeService.listarId(id);

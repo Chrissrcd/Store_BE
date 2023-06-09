@@ -1,4 +1,3 @@
-
 package com.prueba.Marathon_BE.controller;
 
 import com.prueba.Marathon_BE.models.Enterprise;
@@ -15,24 +14,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/enterprises")
 public class EnterpriseController {
+
     @Autowired
     private EnterpriseService enterpriseService;
-    
+
     @GetMapping
-    public List<Enterprise>listar(){
+    public List<Enterprise> listar() {
         return enterpriseService.listar();
     }
-    
+
     @PostMapping
-    public Enterprise agregar(@RequestBody Enterprise enterprise){
+    public Enterprise agregar(@RequestBody Enterprise enterprise) {
         return enterpriseService.add(enterprise);
     }
-    
+
     @GetMapping(path = {"/{id}"})
     public Enterprise listarID(@PathVariable("id") int id) {
         return enterpriseService.listarId(id);
@@ -48,5 +47,4 @@ public class EnterpriseController {
     public Enterprise delete(@PathVariable("id") int id) {
         return enterpriseService.delete(id);
     }
-
 }

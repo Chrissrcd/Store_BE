@@ -4,23 +4,24 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="departments")
+@Table(name = "departments")
 public class Department {
+
     @Id
     @Column
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name="created_by")
+    @Column(name = "created_by")
     private String createdBy;
 
-    @Column(name="create_date")
+    @Column(name = "create_date")
     private LocalDateTime createDate;
 
-    @Column(name="modified_by")
+    @Column(name = "modified_by")
     private String modifiedBy;
 
-    @Column(name="modified_date")
+    @Column(name = "modified_date")
     private LocalDateTime modifiedDate;
 
     @Column
@@ -35,11 +36,10 @@ public class Department {
     @Column
     private String phone;
 
-    @Column(name="id_enterprise")
+    @Column(name = "id_enterprise")
     private int enterpriseId;
 
     // Getters and Setters
-
     public int getId() {
         return id;
     }
